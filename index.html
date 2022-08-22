@@ -63,12 +63,13 @@
                         <div class="bg-gray-200 rounded-2xl pt-3">
                             <img class="h-72 mx-auto" src="images/cristiono-ronaldo.png" alt="">
                         </div>
-                        <h4 class="text-xl font-bold text-center">Cristiono-Ronaldo</h4>
+                        <h4 id="title-Cristiono" class="text-xl font-bold text-center">Cristiono-Ronaldo</h4>
                         <p class="text-center"> <span>34 Goals</span> . <span>110 Assist</span></p>
                         <div class="lg:flex justify-center">
 
                             <button
-                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -83,7 +84,8 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class="  text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class="  text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -98,7 +100,8 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class="  text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class="  text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -113,7 +116,8 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class="text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class="text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -128,7 +132,8 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -143,7 +148,8 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -158,7 +164,8 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -173,7 +180,8 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class="text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class="text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
@@ -188,28 +196,41 @@
                         <div class="lg:flex justify-center">
 
                             <button
-                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                                class=" text-white uppercase px-20 py-4 bg-green-500 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                                onclick="addToPlayer(this)">
 
                                 Select</button>
                         </div>
                     </div>
 
                 </div>
-                <!-- sidenav  -->
             </div>
 
+            <!-- sidenav  -->
+            <!--====== player selected option ====== -->
+
             <div class=" mt-16">
-                <div class="text-center mt-14 ml-8 mb-40 shadow-lg h-96 w-80 p-4 space-y-4 bg-black text-white">
-                    <h1> Your Selected Players <span>0</span></h1>
-                    <ul>
-                        <li>neymer js</li>
+                <div class="text-center mt-14 ml-8 mb-40 shadow-lg h-72 w-80 p-4 space-y-4 bg-black text-white">
+                    <h1 class="text-2xl pb-6 font-bold text-center text-orange-600  border-b-4 border-indigo-500 ">
+                        Your
+                        Selected Players <span id="total-players-selected">0</span>
+                    </h1>
+
+                    <ul id="selected-player-field">
+                        <li class="my-2">1. Neymer Js</li>
+                        <li class="my-2">2. Lionel Messi</li>
+                        <li class="my-2">3. Cristiano Ronaldo</li>
+                        <li class="my-2">4. Andnes Insiesta</li>
+                        <li class="my-2">5. Radamel Falcao</li>
 
                     </ul>
                 </div>
 
+                <!--=============== budget calculate option============== -->
 
                 <div class=" mt-14 ml-8 shadow-purple-900  h-auto w-80 p-4 space-y-4 bg-black text-white ">
-                    <h1 class="text-2xl font-bold text-center text-orange-600 ">Your Budget</h1>
+                    <h1 class="text-2xl pb-6 font-bold text-center text-orange-600 border-b-4 border-indigo-500">Your
+                        Budget</h1>
 
                     <span class="text-orange-200">Per Players</span>
                     <input class="bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name="" id=""><br>
@@ -217,10 +238,10 @@
 
                     <p class="ml-8 text-xl font-bold ">Player Expenses: $<span class="text-xl">00</span></p>
 
-                    <span>Maneger</span>
+                    <span class="text-orange-200">Maneger</span>
                     <input class=" bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name="" id=""><br>
 
-                    <span>Coach</span>
+                    <span class="text-orange-200">Coach</span>
                     <input class="bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name="" id="">
 
                     <br>
