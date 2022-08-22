@@ -27,14 +27,8 @@ function addToPlayer(element) {
     }
     playerArrayNumber.push(selectPlayerNumber);
 
-    document.getElementById('total-players-selected').innerText = playerArrayNumber.length;
+    // document.getElementById('total-players-selected').innerText = playerArrayNumber.length;
 
     displayPlayer(playerArrayNumber);
 }
 
-
-
-
-
-/** -------budget calculate  option------ **/
-console.log('js file')

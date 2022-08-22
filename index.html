@@ -213,7 +213,7 @@
                 <div class="text-center mt-14 ml-8 mb-40 shadow-lg h-72 w-80 p-4 space-y-4 bg-black text-white">
                     <h1 class="text-2xl pb-6 font-bold text-center text-orange-600  border-b-4 border-indigo-500 ">
                         Your
-                        Selected Players <span id="total-players-selected">0</span>
+                        Selected Players-<span id="total-players-selected">V</span>
                     </h1>
 
                     <ul id="selected-player-field">
@@ -233,21 +233,26 @@
                         Budget</h1>
 
                     <span class="text-orange-200">Per Players</span>
-                    <input class="bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name="" id=""><br>
-                    <button class="bg-blue-600 px-20 py-2 ml-8 ">Calculate</button>
+                    <input class="bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name=""
+                        id="bugdet-input"><br>
 
-                    <p class="ml-8 text-xl font-bold ">Player Expenses: $<span class="text-xl">00</span></p>
+                    <button id="btn-budget" class="bg-blue-600 px-20 py-2 ml-8 ">Calculate</button>
+
+                    <p class="ml-8 text-xl font-bold ">Player Expenses: $<span id="cost-forPlayer"
+                            class="text-xl">00</span></p>
 
                     <span class="text-orange-200">Maneger</span>
-                    <input class=" bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name="" id=""><br>
+                    <input class=" bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name=""
+                        id="maneger-inputField"><br>
 
                     <span class="text-orange-200">Coach</span>
-                    <input class="bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name="" id="">
+                    <input class="bg-black border-2 border-white py-1 w-32 ml-8 " type="text" name=""
+                        id="coach-inputField">
 
                     <br>
-                    <button class="bg-blue-600 px-16 py-2 ml-8 ">Calculate Total</button>
+                    <button id="btn-totalCalculate" class="bg-blue-600 px-16 py-2 ml-8 ">Calculate Total</button>
 
-                    <p class="text-end text-xl font-bold ">Total: $<span>00</span></p>
+                    <p class="text-end text-xl font-bold ">Total: $<span id="total-spending">00</span></p>
 
                 </div><br><br>
 
@@ -258,9 +263,11 @@
     </main>
     <!-------- main part end here ----------- -->
 
+
     <!--=============== js file added form here ========== -->
 
     <script src="js/app.js"></script>
+    <script src="js/calculation.js"></script>
 
 </body>
 
