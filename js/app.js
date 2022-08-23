@@ -1,10 +1,9 @@
-
+// Array-------------------
 const playerArrayNumber = [];
-// console.log(playerAdd);
+
+// =========children create and ul er modde set ==============
 
 function displayPlayer(player) {
-
-
 
     const listOfPlayer = document.getElementById('selected-player-field');
     listOfPlayer.innerHTML = '';
@@ -23,8 +22,9 @@ function displayPlayer(player) {
 
     };
 
-
 }
+
+// =================added in array and warling  alert ==================
 
 function addToPlayer(element) {
     const playerName = element.parentNode.parentNode.children[1].innerText;
@@ -35,19 +35,30 @@ function addToPlayer(element) {
 
     if (playerArrayNumber.length >= 5) {
 
-        alert('More than that is not allowed')
-
-    } else {
-        playerArrayNumber.push(selectPlayerNumber);
+        alert('More than that is not allowed');
 
     }
 
+    else {
+        playerArrayNumber.push(selectPlayerNumber);
 
+
+    }
+
+    //============ disabled button after click =============
+
+    element.setAttribute('disabled', true);
+    element.style.backgroundColor = '#607EAA';
+
+    // ============Total length count ===========
     // document.getElementById('total-players-selected').innerText = playerArrayNumber.length;
+
+    //============ select player  field  call and single player add============ 
 
     displayPlayer(playerArrayNumber);
 };
 
+//============ delegete select player field ==========
 
 const items = document.getElementsByClassName('delegete-contant');
 

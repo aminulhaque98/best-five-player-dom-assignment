@@ -1,4 +1,6 @@
 
+// ================budget calculat part =================
+
 document.getElementById('btn-budget').addEventListener('click', function () {
 
     const bugdetnputValue = formHereInputValue('bugdet-input')
@@ -6,6 +8,7 @@ document.getElementById('btn-budget').addEventListener('click', function () {
     const onlyPlayerCostTotal = playerArrayNumber.length * bugdetnputValue;
 
     const buyPlayerCost = document.getElementById('cost-forPlayer');
+
     // const buyPlayerCostString = buyPlayerCost.innerText;
     // const getPlayerBuyValue = parseFloat(buyPlayerCostString);
 
@@ -13,13 +16,15 @@ document.getElementById('btn-budget').addEventListener('click', function () {
 
 });
 
+//====================== Total cost calculation part ================
 
 document.getElementById('btn-totalCalculate').addEventListener('click', function () {
 
-    const manegerInputValue = formHereInputValue('maneger-inputField')
+    const manegerInputValue = formHereInputValue('maneger-inputField');
 
 
-    const coachInputValue = formHereInputValue('coach-inputField')
+    const coachInputValue = formHereInputValue('coach-inputField');
+
 
     const buyPlayerCost = document.getElementById('cost-forPlayer');
     const buyPlayerCostString = buyPlayerCost.innerText;
